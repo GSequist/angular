@@ -5,9 +5,10 @@
 <h2 *ngIf="winner">Player {{ winner }} won the game!</h2>
 
 <main>
-    <app-board>
-        *ngFor="let val of squares; let i = index"
-        [value]="val"
-        (click)="makeMove(i)"
-    </app-board>
+  <app-square
+    *ngFor="let val of squares; let i = index"
+    [value]="val"
+    (click)="makeMove(i)"
+  >
+  </app-square>
 </main>
